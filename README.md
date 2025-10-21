@@ -1,8 +1,6 @@
-# `nomad-docs`
+# NOMAD Tajine Documentation
 
-This repository hosts all official documentation for the NOMAD platform — including user guides, developer docs, and API references. It supports both users and developers working with NOMAD and NOMAD Oasis.
-
-See the releases for different versions of the documentation (from v1.4.0 onwards they are synced with NOMAD versions).
+This repository hosts the specific documentation for the NOMAD Tajine Example Oasis.
 
 ## Contributing
 
