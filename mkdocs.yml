@@ -15,7 +15,6 @@ nav:
       - Accessing data via API: tutorial/access_api.md
       - Creating custom schemas: tutorial/custom.md
       - Developing NOMAD plugins: tutorial/develop_plugin.md
-      - Creating this OASIS: tutorial/creating_this_oasis.md
   - How-to guides:
       - Overview: howto/overview.md
       - Manage and find data:
@@ -96,6 +95,7 @@ nav:
       - Workflows: explanation/workflows.md
       - Plugins: explanation/plugin_system.md
       - Federation and Oasis: explanation/oasis.md
+      - Creating this OASIS: explanation/creating_this_oasis.md
   - Reference:
       # - Overview: reference/overview.md # TODO
       # - reference/metainfo.md # TODO This file no longer exists ... was it lost somehow?

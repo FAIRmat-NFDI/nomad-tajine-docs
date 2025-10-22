@@ -2,7 +2,9 @@
 hide: toc
 ---
 
-# NOMAD Documentation
+# NOMAD Tajine Documentation
+
+This is a NOMAD Tajine deployment, serving as a demonstrator of the use of NOMAD for general purposes beyond the material science; in this particular case, we adapt NOMAD for cooking recipes. The information on the creation of this deployment can be found [here](explanation/creating_this_oasis.md).
 
 <!-- A single sentence that says what the product is, succinctly and memorably -->
 NOMAD is a free, and open-source data management platform for materials science, whose goal is to make scientific research data FAIR (findable, accessible, interoperable and reusable).
