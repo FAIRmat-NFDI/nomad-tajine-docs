@@ -43,6 +43,22 @@ class RecipeStep(ActivityStep):
     )
 ```
 
+This class describes a single step of the recipe; it inherits from `ActivityStep` base section and adds two quantities (both user editable, as defined by `a_eln` parameter) and two subsections (both repeating, as more than one tool or instrument might be needed for a cooking step). Some quantities (such as `name`) are inherited from the base section and therefore do not have to be defined explicitly. The quantities and/or subsections above might not be sufficient for certain types of cooking steps, so this class can be further specialized, for example, by adding temperature value:
+
+```python
+class HeatingCoolingStep(RecipeStep):
+    temperature = Quantity(
+        type=float,
+        default=20.0,
+        a_eln=ELNAnnotation(
+            component=ELNComponentEnum.NumberEditQuantity, defaultDisplayUnit='celsius'
+        ),
+        unit='celsius',
+    )
+```
+
+The plugin require testing as it is being written. Full deployment of an OASIS with the plugin takes significant time (see below), therefore we use [nomad-distro-dev](https://github.com/FAIRmat-NFDI/nomad-distro-dev) for the tests. The instructions for it are provided in the `README.md` file; we only had `nomad-lab[parsing, infrastructure]` and `nomad-tajine-plugin` as dependencies (remove other dependencies to speed up the start-up time of nomad-distro-dev).
+
 # Creating an example upload
 
 # Visualization with a NOMAD app
