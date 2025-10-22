@@ -15,7 +15,7 @@ nav:
       - Accessing data via API: tutorial/access_api.md
       - Creating custom schemas: tutorial/custom.md
       - Developing NOMAD plugins: tutorial/develop_plugin.md
-      - Creating This OASIS: tutorial/creating_this_oasis.md
+      - Creating this OASIS: tutorial/creating_this_oasis.md
   - How-to guides:
       - Overview: howto/overview.md
       - Manage and find data:
