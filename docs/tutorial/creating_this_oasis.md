@@ -12,7 +12,36 @@ The previous step resulted in a plugin which has the required structure and entr
 
 The main class of the schema is, naturally, a `Recipe`. We used NOMAD BaseSections for the definition of classes, as they readily provide a framework for basic required functionality. For example, `Recipe` inherits from `BaseSection` and  `Schema` classes: the former provides handling of name, id, descriptions and automatically fills parts of the result section; the latter allows to use `Recipe` for manually creating ELN entries in the OASIS.
 
-`Recipe` class has multiple quantities and subsections, as well as normalization method. 
+`Recipe` class has multiple quantities (`name`, `authors`, `nutrition_value` etc) for storing simple values, and subsections (`steps`, `tools` etc) for storing more complex data. For each subsection, a corresponding class with its own structure was defined. Normalization method of each class allows to analyze the data, for example to create a list of all ingredients needed for the recipe from known ingredients for each step.
+
+Below you can find example code for one of the classes:
+
+```python
+class RecipeStep(ActivityStep):
+    duration = Quantity(
+        type=float,
+        a_eln=ELNAnnotation(
+            component=ELNComponentEnum.NumberEditQuantity, defaultDisplayUnit='minute'
+        ),
+        unit='minute',
+    )
+
+    tools = SubSection(
+        section_def=Tool,
+        description='',
+        repeats=True,
+    )
+
+    ingredients = SubSection(
+        section_def=IngredientAmount,
+        description='',
+        repeats=True,
+    )
+
+    instruction = Quantity(
+        type=str, a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity)
+    )
+```
 
 # Creating an example upload
 
